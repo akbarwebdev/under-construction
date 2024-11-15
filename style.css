@@ -30,6 +30,7 @@ video {
   /* transform: translate(-50%, -50%); */
   object-fit: cover;
   filter: brightness(60%);
+  pointer-events: none;
 }
 
 /* Content */
@@ -99,10 +100,6 @@ video {
   form button {
     padding: 8px 16px; /* Adjust padding for buttons */
   }
-
-  .plane {
-    width: 80px; /* Scale down plane size */
-  }
 }
 
 @media (max-width: 480px) {
@@ -112,5 +109,12 @@ video {
 
   .content p {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  video {
+    object-fit: cover; /* Still fills the viewport */
+    width: 100%; /* Adjusts to fit narrower screens */
+    height: 100%; /* Adjusts to fit shorter screens */
   }
 }
